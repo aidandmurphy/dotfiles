@@ -20,6 +20,7 @@
 #Apps
     inputs.zen-browser.packages.x86_64-linux.specific    
     
+    pkgs.xsane
     pkgs._1password-gui
     pkgs.vscode
     pkgs.firefox

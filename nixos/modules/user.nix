@@ -25,15 +25,7 @@
 
   hardware = {
     i2c.enable = true;
-    #printers.ensurePrinters = [
-     # {
-        #name = "DeskJet_2700";
-        #location = "Home Printer";
-        #deviceUri = "usb://HP/DeskJet%202700%20series?serial=CN1576A1K6&interface=1";
-        #model = "HP/hp-deskjet_2700_series.ppd.gz";
-        #ppdOptions.PageSize = "A4";
-      #}
-    #];
+    sane.enable = true;
   };
 
   documentation.nixos.enable = false;
@@ -43,6 +35,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "scanner"
       "i2c"
       "lp"
     ];
