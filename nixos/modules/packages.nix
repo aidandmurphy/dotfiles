@@ -26,7 +26,7 @@
     pkgs.nautilus
     pkgs.obsidian
     pkgs.libreoffice
-    pkgs.arc-browser
+    #pkgs.arc-browser #Mac/darwin only
     
 #Gaming 
     pkgs.steam #user.nix --- programs.steam options
