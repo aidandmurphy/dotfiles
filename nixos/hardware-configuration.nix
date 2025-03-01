@@ -6,7 +6,6 @@
 {
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
-      ./nvidia.nix
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
@@ -15,12 +14,12 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/bb92abd6-dc63-408d-8178-4ab7347a3c86";
+    { device = "/dev/disk/by-uuid/33e48f96-4563-4a7b-9e7d-d0d4702274fb";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/D70E-25C7";
+    { device = "/dev/disk/by-uuid/1150-F991";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };

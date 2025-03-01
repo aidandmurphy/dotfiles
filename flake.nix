@@ -13,10 +13,6 @@
       url = "github:aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -26,28 +22,30 @@
       home-manager,
       astal,
       ags,
-      zen-browser,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in
-    {
-      
+    {      
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           modules = [
             ./nixos
+
+
+            home-manager.nixosModules.home-manager
+	    {
+      		home-manager.backupFileExtension = "bkup";
+     	 	home-manager.useGlobalPkgs = true;
+      		home-manager.users.aidan = import ./home-manager/default.nix;    
+      		home-manager.extraSpecialArgs = { inherit inputs; inherit pkgs; };
+	    }
+
           ];
         };
-      };
-      home-manager.backupFileExtension = "bkup";
-      homeConfigurations."aidan" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = { inherit inputs; };
-        modules = [ ./home-manager ];
       };
     };
 }

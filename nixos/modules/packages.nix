@@ -1,7 +1,7 @@
 { inputs, pkgs, ... }:
 {
   nixpkgs.config.allowUnfree = true;
-
+  nixpkgs.config.allowUnsupportedSystem = true;
   environment.systemPackages = [
 
     pkgs.home-manager
@@ -18,8 +18,6 @@
     pkgs.gh
 
 #Apps
-    inputs.zen-browser.packages.x86_64-linux.specific    
-    
     pkgs.xsane
     pkgs._1password-gui
     pkgs.vscode
@@ -28,7 +26,8 @@
     pkgs.nautilus
     pkgs.obsidian
     pkgs.libreoffice
-
+    pkgs.arc-browser
+    
 #Gaming 
     pkgs.steam #user.nix --- programs.steam options
     pkgs.protonup-qt
