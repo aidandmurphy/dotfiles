@@ -16,6 +16,7 @@
     pkgs.fzf
     pkgs.zsh #user.nix --- programs.zsh options
     pkgs.gh
+    pkgs.mullvad-vpn
 
 #Apps
     pkgs.xsane
@@ -24,15 +25,17 @@
     pkgs.firefox
     pkgs.spotify
     pkgs.nautilus
-    pkgs.obsidian
+    #pkgs.obsidian #removed in favor of anytype
     pkgs.libreoffice
     #pkgs.arc-browser #Mac/darwin only
+    pkgs.anytype
+    pkgs.stremio
     
 #Gaming 
     pkgs.steam #user.nix --- programs.steam options
     pkgs.protonup-qt
-
-
+    pkgs.prismlauncher
+    pkgs.gamemode
     
   ];
 }
