@@ -19,6 +19,17 @@
     cpuFreqGovernor = "performance";
   };
 
+  environment.etc = {
+      "1password/custom_allowed_browsers" = {
+        text = ''
+          .zen-wrapped
+        '';
+        mode = "0755";
+      };
+    };
+
+
   security.rtkit.enable = true;
+  security.polkit.enable = true;
   system.stateVersion = "24.05";
 }

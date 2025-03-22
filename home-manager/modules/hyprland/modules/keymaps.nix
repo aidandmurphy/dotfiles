@@ -36,6 +36,11 @@
 
       "SUPER SHIFT, S, exec, /run/current-system/sw/bin/sh /home/aidan/Configuration/home-manager/modules/hyprland/scripts/screenshot.sh"
       "SUPER SHIFT, C, exec, /run/current-system/sw/bin/sh /home/aidan/Configuration/home-manager/modules/hyprland/scripts/color_picker.sh"
+      
+      
+      ",XF86AudioNext, exec ,playerctl position 5+"
+      ",XF86AudioPrev, exec ,playerctl position 5-"
+      ",XF86AudioMute, exec ,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     ];
 
     binde = [
@@ -43,11 +48,22 @@
       "SUPER ALT, L, resizeactive, 10 0"
       "SUPER ALT, K, resizeactive, 0 -10"
       "SUPER ALT, J, resizeactive, 0 10"
+
+      ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.75 @DEFAULT_AUDIO_SINK@ 5%+"
+      ",XF86AudioLowerVolume, exec, wpctl set-volume -l 0.0 @DEFAULT_AUDIO_SINK@ 5%-"
+      ",XF86AudioPlay, exec, playerctl play-pause"
+
     ];
 
     bindm = [
       "SUPER, mouse:272, movewindow"
       "SUPER, mouse:273, resizewindow"
+    ];
+
+
+    bindo = [
+      ",XF86AudioNext, exec ,playerctl next"
+      ",XF86AudioPrev, exec ,playerctl previous"
     ];
   };
 }

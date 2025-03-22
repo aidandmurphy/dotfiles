@@ -6,8 +6,13 @@
 
   wayland.windowManager.hyprland.settings = {
     monitor = [
-      "DP-2, preferred, 0x0, 1"
-      "HDMI-A-1, preferred, 1920x0, 1"
+      "desc:LG Electronics LG ULTRAGEAR 0x00000518, preferred, 0x0, 1"
+      "desc:BNQ BenQ EW3270U A7K03188019, preferred, 1920x0, 1"
+    ];
+    workspace = [
+      "1,monitor:desc:LG Electronics LG ULTRAGEAR 0x00000518, default:true"
+      "2,monitor:desc:BNQ BenQ EW3270U A7K03188019, default:false"
+
     ];
   };
 }
