@@ -1,0 +1,112 @@
+#-------------------------------------------------------------------------------------
+#                                                            
+#   ,---.   ,--.                        ,--.     ,--.        
+#  '   .-',-'  '-. ,--,--.,--.--. ,---. |  ,---. `--' ,---.  
+#  `.  `-.'-.  .-'' ,-.  ||  .--'(  .-' |  .-.  |,--.| .-. | 
+#  .-'    | |  |  \ '-'  ||  |   .-'  `)|  | |  ||  || '-' ' 
+#  `-----'  `--'   `--`--'`--'   `----' `--' `--'`--'|  |-'  
+#                                                    `--'    
+#
+#      , _ ,        RESUME:  Custom pront for terminals and complement
+#     ( o o )                because i use OhMyZsh.
+#    /'` ' `'\
+#    |'''''''|      AUTHOR:  Andr3xDev
+#    |\\'''//|      URL: (https://github.com/Andr3xDev/Dotfiles)
+#       """                                              
+#-------------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------
+#   Format
+#------------------------------------------------------------
+
+format = """
+[┌──](bold green)$os\
+$directory\
+$git_branch\
+$git_status \
+$aws\
+$memory_usage\
+$docker_context\
+$cmd_duration\
+$status
+[└─➤](bold green) """
+
+#--- properties ---#
+add_newline = true 
+continuation_prompt = "▶▶ "
+
+
+
+#------------------------------------------------------------
+#   Palette
+#------------------------------------------------------------
+
+palette = 'gruvbox_material'
+
+[palettes.gruvbox_material]
+background = "#282828"
+green = '#a9b665'
+red = '#ea6962'
+blue = '#7daea3'
+yellow = '#d8a657'
+orange = '#e78a4e'
+
+
+
+#------------------------------------------------------------
+#   Elements
+#------------------------------------------------------------
+
+[os]
+format = '[┃](bold fg:green bg:background)[   ](bold fg:white bg:background) '
+disabled = false
+
+[directory]
+truncation_length = 3
+fish_style_pwd_dir_length = 3
+home_symbol = ' 󰋜 ~'
+read_only = '  '
+format = '[┃](bold fg:blue bg:background)[$path ](bold fg:white bg:background)[$read_only ](bold fg:white bg:background)'
+
+[git_branch]
+format = ' [┃](bold fg:yellow bg:background)[  $branch ](bold fg:white bg:background)'
+truncation_symbol = '…/'
+
+[git_status]
+format = '[$all_status$ahead_behind ](bold fg:white bg:background)'
+conflicted = '🏳'
+up_to_date = ''
+untracked = ' '
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+stashed = ' '
+modified = ' '
+staged = '[++\($count\)](bold fg:white bg:background)'
+renamed = '襁 '
+deleted = ' '
+
+[cmd_duration]
+min_time = 0
+format = "[┃](bold fg:orange bg:background)[ ⏱ $duration ](bold fg:white bg:background)"
+show_milliseconds = true
+
+[status]
+disabled = false
+format = '[┃](bold fg:red bg:background)[ ✘ ](bold fg:red bg:background)'
+
+
+
+#------------------------------------------------------------
+#   Extra Elements
+#------------------------------------------------------------
+
+[line_break]
+disabled = true
+
+[aws]
+symbol = "  "
+
+[docker_context]
+symbol = " "

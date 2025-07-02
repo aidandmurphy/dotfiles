@@ -1,0 +1,7 @@
+[2025-06-30 22:48:51.110][verbose] Tunnel state: connected
+[2025-06-30 22:48:51.111][verbose] Initial: Wrong content height: 597, expected 568
+[2025-06-30 22:48:51.151][verbose] Map canvas scale factor: 1, using: 1
+[2025-06-30 22:49:03.155][verbose] Tunnel state: disconnecting
+[2025-06-30 22:49:03.168][verbose] Tunnel state: disconnecting
+[2025-06-30 22:49:03.174][verbose] Tunnel state: disconnected
+[2025-06-30 22:49:03.704][verbose] Tunnel state: disconnected

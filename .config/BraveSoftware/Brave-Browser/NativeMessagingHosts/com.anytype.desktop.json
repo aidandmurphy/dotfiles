@@ -1,0 +1,11 @@
+{
+  "name": "com.anytype.desktop",
+  "description": "Anytype desktop <-> web clipper bridge",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://jbnammhjiplhpjfncnlejjjejghimdkf/",
+    "chrome-extension://jkmhmgghdjjbafmkgjmplhemjjnkligf/",
+    "chrome-extension://lcamkcmpcofgmbmloefimnelnjpcdpfn/"
+  ],
+  "path": "/tmp/.mount_anytypXbfwxF/resources/app.asar.unpacked/dist/nativeMessagingHost"
+}

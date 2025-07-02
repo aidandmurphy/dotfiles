@@ -1,0 +1,9 @@
+autologin.blob="bS/OjjOT3etevwJwNMluViXO4GOH9ki42whhGKpFb45x8LvMU9sLR0Mnjb9HH0qfSEStEyWZGSQONdnUg43Ahk9UdCZY5Ubn8rCsSOjhEGTVszg3zbPBdYZ0QuTQuef5xivO9VCSUTyNtJeJSiWSxo0bL8/70sPEFTRHF4/wQ2GE6El+YZtnwVTvX1X+HeCrubpXYxl2xavbVgb1j7/Qsk8AndRMGhfehLk++le2HDyScspHaGqVLu6nv3/zmK5ugkE/qcn0p6Pb+eOHN0BGNw=="
+autologin.canonical_username="scientificamerican"
+autologin.saved_credentials="{\"scientificamerican\":[\"scientificamerican\",\"bS/OjjOT3etevwJwNMluViXO4GOH9ki42whhGKpFb45x8LvMU9sLR0Mnjb9HH0qfSEStEyWZGSQONdnUg43Ahk9UdCZY5Ubn8rCsSOjhEGTVszg3zbPBdYZ0QuTQuef5xivO9VCSUTyNtJeJSiWSxo0bL8/70sPEFTRHF4/wQ2GE6El+YZtnwVTvX1X+HeCrubpXYxl2xavbVgb1j7/Qsk8AndRMGhfehLk++le2HDyScspHaGqVLu6nv3/zmK5ugkE/qcn0p6Pb+eOHN0BGNw==\"]}"
+app.rollback-to-sc=true
+es.send-on-startup=true
+core.clock_delta=0
+autologin.username="scientificamerican"
+storage.last-location="/home/aidan/.cache/spotify/Storage"
+app.last-launched-version="1.2.63.394.g126b0d89"

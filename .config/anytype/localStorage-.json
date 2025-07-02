@@ -1,0 +1,24 @@
+{
+	"sidebar": {
+		"width": 336,
+		"isClosed": false
+	},
+	"color": "orange",
+	"bgColor": "orange",
+	"accountId": "A8V8bJP9fMWVYa4bviahdU2BqfQSVMcSsqitFkiaHZsjd1Tb",
+	"space": {
+		"bafyreigz5hydfedb5g4tpnl6bzw2u7aa5lkmpogstxythkjlnmto5ncnt4.17twlph0j11ai": {
+			"lastOpenedObject": {
+				"1": {
+					"id": "bafyreifrl6vpaayz2ylhzbzmaesqjv6tzgnysrue7bcw7vzqt2al5dhrxm",
+					"layout": 0
+				}
+			}
+		}
+	},
+	"account": {
+		"A8V8bJP9fMWVYa4bviahdU2BqfQSVMcSsqitFkiaHZsjd1Tb": {
+			"spaceId": "bafyreigz5hydfedb5g4tpnl6bzw2u7aa5lkmpogstxythkjlnmto5ncnt4.17twlph0j11ai"
+		}
+	}
+}
