@@ -1,0 +1,112 @@
+* {
+  font-family: "Cantarell", sans-serif;
+  font-size: 12px;
+  color: white;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  padding: 2px 3px 0px 3px;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* Floating modules styling */
+#clock, #battery, #pulseaudio, #tray,
+#custom-power, #custom-terminal, #custom-files, #custom-browser, #custom-tailscale {
+  padding: 4px 10px;
+  margin: 2px;
+  border-radius: 3px;
+  border: 1px solid rgba(221, 221, 221, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
+ /* background-color: rgba(113, 104, 124, 0.8);*/
+  box-shadow: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+
+
+/* These icons are off centre */
+#custom-browser {
+  font-size: 13px;
+  padding: 4px 10px;
+  padding: 4px 13px 4px 10px; /* top, right, bottom, left */
+}
+
+#custom-power {
+  color: #dbaba7;
+  font-size: 18px;
+  padding: 4px 13px 4px 10px;
+}
+
+#custom-terminal {
+  padding: 4px 14px 4px 10px;
+}
+
+#custom-files {
+  padding: 4px 14px 4px 10px;
+}
+
+/* Hover effect */
+#clock:hover, #battery:hover, #pulseaudio:hover, #tray:hover,
+#custom-power:hover, #custom-tailscale:hover, #custom-terminal:hover,
+#custom-files:hover, #custom-browser:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(225, 225, 225, 1);
+}
+
+/* Icon styling */
+#battery.warning:not(.charging) {
+  color: #fce94f;
+}
+
+#battery.charging {
+  color: #8aff80;
+}
+
+#network.disconnected {
+  background: #f53c3c;
+}
+
+#custom-spotify {
+  color: rgb(102, 220, 105);
+}
+
+/* Tailscale-specific */
+#custom-tailscale {
+  font-size: 16px;
+  font-family: "SF Pro Display", sans-serif;
+  padding: 4px 12px 4px 10px;
+}
+
+#custom-tailscale.connected {
+  color: #3c9d59;
+}
+
+/*  background-image: url("file:///home/oranmcclintock/Pictures/vpn.png");
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 30px;
+  min-height: 30px;*/
+
+#custom-notifications {
+  padding: 4px 14px 4px 10px; /* off centre */
+  margin: 2px;
+  border-radius: 3px;
+  border: 1px solid rgba(221, 221, 221, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover effect */
+#custom-notifications:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(225, 225, 225, 1);
+}
+

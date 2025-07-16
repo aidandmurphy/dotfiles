@@ -1,0 +1,30 @@
+#!/bin/bash
+
+capture() {
+  time=$(date +"%Y-%m-%d_%H-%M-%S")
+  screenshot_path="$HOME/Pictures/${time}.png"
+
+  # Take screenshot and save to file
+  grim -g "$(slurp)" "$screenshot_path"
+  grim_status=$?
+
+  if [ $grim_status -ne 0 ]; then
+    notify-send -i error "Screenshot failed" "grim command failed with exit code $grim_status."
+    return 1
+  fi
+
+  # Copy screenshot to clipboard
+  wl-copy < "$screenshot_path"
+  wlcopy_status=$?
+
+  if [ $wlcopy_status -ne 0 ]; then
+    notify-send -i warning "Clipboard copy failed" "wl-copy command failed with exit code $wlcopy_status."
+    return 1
+  fi
+
+  # If both succeed
+  notify-send -i picture "Screenshot taken" "Saved to $screenshot_path and copied to clipboard."
+  return 0
+}
+
+capture

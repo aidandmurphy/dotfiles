@@ -1,0 +1,54 @@
+/* Window background */
+window {
+    margin: 8px; 
+    border-radius: 2px; 
+    background-color: rgba(30, 30, 30, 0.6); 
+    border: 1px solid #d1d1d1; 
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    font-family: "SF Pro Display", sans-serif;
+}
+
+/* Search input box */
+#input {
+    margin: 10px 12px; 
+    padding: 8px 12px; 
+    font-size: 14px;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 8px;
+    font-family: "SF Pro Display", sans-serif; 
+}
+
+/* Entry box */
+#entry {
+    padding: 8px 12px; 
+    margin: 4px 10px;  
+    border-radius: 8px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+/*    transition: background-color 1s ease; */
+    font-family: "SF Pro Display", sans-serif; 
+}
+
+/* Text next to the icon */
+#text {
+    margin-left: 12px;
+    color: #e0e0e0;
+    font-size: 14px;
+    font-family: "SF Pro Display", sans-serif;
+}
+
+/* App icon styling */
+#icon {
+    min-width: 18px;
+    min-height: 18px; 
+    margin-right: 12px; 
+}
+
+/* Scrollbox + list */
+#outer-box, #inner-box, #scroll {
+    background-color: transparent;
+    border: none;
+}

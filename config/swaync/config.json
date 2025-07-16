@@ -1,0 +1,100 @@
+{
+    "$schema": "/etc/xdg/swaync/configSchema.json",
+    "positionX": "right",
+    "positionY": "top",
+    "layer": "overlay",
+    "control-center-layer": "top",
+    "layer-shell": true,
+    "cssPriority": "application",
+    "control-center-width": 350,
+    "control-center-margin-top": 8,
+    "control-center-margin-bottom": 8,
+    "control-center-margin-right": 10,
+    "control-center-margin-left": 20,
+    "notification-2fa-action": true,
+    "notification-inline-replies": true,
+    "notification-window-width": 350,
+    "notification-icon-size": 60,
+    "notification-body-image-height":  180,
+    "notification-body-image-width": 180,
+    "timeout": 12,
+    "timeout-low": 6,
+    "timeout-critical": 1,
+    "fit-to-screen": true,
+    "keyboard-shortcuts": true,
+    "border-radius": 1,
+    "image-visibility": "when available",
+    "transition-time": 200,
+    "hide-on-clear": false,
+    "hide-on-action": true,
+    "script-fail-notify": true,
+    "widgets": [
+        "mpris",
+        "dnd",
+        "title",
+        "notifications",
+        "volume",
+        "backlight",
+        "buttons-grid"
+    ],
+    "widget-config": {
+        "title": {
+            "text": "Notification Center",
+            "clear-all-button": true,
+            "button-text": "󰆴"
+        },
+        "label": {
+            "max-lines":1,
+            "text": "Notification Center!"
+        },
+
+        "mpris": {
+            "image-size": 80,
+            "image-radius": 0
+        },
+        "volume": {
+            "label": "󰕾 "
+        },
+        "backlight": {
+            "label": "󰃟 "
+        },
+        "buttons-grid": {
+            "_comment": "'\\u200A' is to add space and centre icons",       
+            "actions": [
+                {
+                    "label": "󰝟",
+                    "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+                    "type": "toggle"
+                },
+                {
+                    "label": "\u200A\u200A\u200A\u200A\u200A",
+                    "command": "kitty nmtui"
+                },
+                {
+                    "label": "",
+                    "command": "~/.config/hypr/scripts/start-bluetooth.sh"
+                },
+                {
+                    "label": "\u200A\u200A\u200A\u200A",
+                    "command": "kitty bash -i -c 'btop'"
+                },
+                {
+                    "label": "",
+                    "command": "swaylock"
+                },
+                {
+                    "label": "",
+                    "command": "systemctl reboot"
+                },
+                {
+                    "label": "",
+                    "command": "systemctl poweroff"
+                },
+                {
+                    "label": "󰅠\u200A\u200A\u200A\u200A",
+                    "command": "~/Applications/Nextcloud.AppImage --background"
+                }
+            ]
+        }
+    }
+}

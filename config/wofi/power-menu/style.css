@@ -1,0 +1,26 @@
+window {
+  margin: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  background-color: rgba(30, 30, 30, 0.7);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+#entry {
+  padding: 10px;
+  margin: 6px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+#entry:selected {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+#text {
+  color: white;
+  font-size: 16px;
+}
+#input{
+        display: none;
+        margin: -1000px 5px; 
+}

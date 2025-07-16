@@ -1,0 +1,110 @@
+{
+  "layer": "bottom",
+  "position": "top",
+  "height": 28,
+  "spacing": 0,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "modules-left": [
+    "custom/power",
+    "custom/terminal",
+    "custom/files",
+    "custom/browser"
+  ],
+  "modules-center": [
+    
+  ],
+  "modules-right": [
+    "tray",
+    "custom/vpn",
+    "pulseaudio",
+    "clock#time",
+    "battery",
+    "custom/notifications"
+  ],
+  "custom/power": {
+    "format": "X",
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/change-theme.sh"
+  },
+  "custom/terminal": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "kitty"
+  },
+  "custom/files": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "kitty -e yazi"
+  },
+  "custom/browser": {
+    "format": "󰈹",
+    "tooltip": false,
+    "on-click": "zen-browser"
+  },
+  "clock#time": {
+    "interval": 1,
+    "format": "   {:%H:%M}",
+    "tooltip": false
+  },
+  "clock#date": {
+    "interval": 10,
+    "format": "  {:%e %b %Y}",
+    "tooltip-format": "{:%e %B %Y}"
+  },
+  "tray": {
+    "spacing": 16
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}    {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "   {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+
+"custom/notifications": {
+  "format": "",
+  "return-type": "json",
+  "exec": "swaync-client -swb",
+  "on-click": "swaync-client -t",
+  "on-click-right": "swaync-client -d",
+  "tooltip": false
+},
+
+"custom/vpn": {
+    "exec": "~/.config/waybar/scripts/waybar-vpn.sh --status",
+    "on-click": "~/.config/waybar/scripts/waybar-vpn.sh --toggle",
+    "return-type": "json",
+    "tooltip": true,
+    "interval": 1,
+    "format": "{icon}",
+    "format-icons": {
+      "connected": "󰦝",
+      "stopped": "󱦚"
+    }
+  }
+}
